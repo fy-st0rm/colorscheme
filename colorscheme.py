@@ -87,7 +87,6 @@ with open(file_path, "r") as r:
 
 for no, line in enumerate(data):
 	if "colors: *" in line:
-		print(line)
 		data[no] = f"colors: *{scheme}\n"
 
 with open(file_path, "w") as w:
