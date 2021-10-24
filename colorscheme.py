@@ -39,14 +39,41 @@ colorschemes = {
 			"vim"			: "dracula",
 			"[seperator]\n"	: "#6272a4",
 			"[ethernet]\n"	: "#bf616a",
-			"[wifi]\n"		: "#50fa7b",
+			"[wifi]\n"		: "#5af78e",
 			"[cpu_temp]\n"	: "#8be9fd",
 			"[cpu_usage]\n"	: "#9aedfe",
 			"[ram]\n"		: "#ffb86c",
 			"[volume]\n"	: "#bd93f9",
-			"[battery]\n"	: "#ff79c6",
+			"[battery]\n"	: "#ff92d0",
 			"[time]\n"		: "#f1fa8c"
 
+		}
+}
+
+colorschemes_i3 = {
+	"gruvbox-dark": {
+			"set $pannel_bg": "#282828",
+			"set $border"	: "#689d6a",
+			"set $menu_nb"	: "#282828",
+			"set $menu_nf"	: "#ebdbb2",
+			"set $menu_sb"	: "#98971a",
+			"set $menu_sf"	: "#282828"
+		},
+	"nord":			{	
+			"set $pannel_bg": "#2e3440",
+			"set $border"	: "#81a1c1",
+			"set $menu_nb"	: "#282a36",
+			"set $menu_nf"	: "#ffffff",
+			"set $menu_sb"	: "#89cff0",
+			"set $menu_sf"	: "#282a36"
+		},
+	"dracula":		{
+			"set $pannel_bg": "#282a36",
+			"set $border"	: "#bd93f9",
+			"set $menu_nb"	: "#282a36",
+			"set $menu_nf"	: "#ffffff",
+			"set $menu_sb"	: "#89cff0",
+			"set $menu_sf"	: "#282a36"	
 		}
 }
 
@@ -104,6 +131,24 @@ for no, line in enumerate(data):
 	if "colorscheme " in line:
 		vim = colorschemes[scheme]["vim"]
 		data[no] = f"colorscheme {vim}\n"
+
+with open(file_path, "w") as w:
+	w.writelines(data)
+
+#----
+# i3
+#----
+file_path = f"{home_dir}/.config/i3/config"
+
+with open(file_path, "r") as r:
+	data = r.readlines()
+
+tokens = ["set $pannel_bg", "set $border", "set $menu_nb", "set $menu_nf", "set $menu_sb", "set $menu_sf"]
+for no, line in enumerate(data):
+	for i in tokens:
+		if i in line:
+			color = colorschemes_i3[scheme][i]
+			data[no] = f"{i} {color}\n"
 
 with open(file_path, "w") as w:
 	w.writelines(data)
