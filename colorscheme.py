@@ -87,9 +87,9 @@ colorschemes_i3 = {
 			"set $menu_sf"	: "#282a36"	
 		},
 	"doom-one":		{
-			"set $pannel_bg": "#282a36",
+			"set $pannel_bg": "#282c34",
 			"set $border"	: "#81a1c1",
-			"set $menu_nb"	: "#282a36",
+			"set $menu_nb"	: "#282c34",
 			"set $menu_nf"	: "#ffffff",
 			"set $menu_sb"	: "#51afef",
 			"set $menu_sf"	: "#282a36"	
