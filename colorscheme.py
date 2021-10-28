@@ -46,7 +46,18 @@ colorschemes = {
 			"[volume]\n"	: "#bd93f9",
 			"[battery]\n"	: "#ff92d0",
 			"[time]\n"		: "#f1fa8c"
-
+		},
+	"doom-one":		{
+			"vim"			: "onedark",
+			"[seperator]\n"	: "#6272a4",
+			"[ethernet]\n"	: "#bf616a",
+			"[wifi]\n"		: "#98be65",
+			"[cpu_temp]\n"	: "#51afef",
+			"[cpu_usage]\n"	: "#ecbe7b",
+			"[ram]\n"		: "#da8548",
+			"[volume]\n"	: "#bd93f9",
+			"[battery]\n"	: "#da8548",
+			"[time]\n"		: "#46d9ff"
 		}
 }
 
@@ -72,7 +83,15 @@ colorschemes_i3 = {
 			"set $border"	: "#bd93f9",
 			"set $menu_nb"	: "#282a36",
 			"set $menu_nf"	: "#ffffff",
-			"set $menu_sb"	: "#89cff0",
+			"set $menu_sb"	: "#bd93f9",
+			"set $menu_sf"	: "#282a36"	
+		},
+	"doom-one":		{
+			"set $pannel_bg": "#282a36",
+			"set $border"	: "#81a1c1",
+			"set $menu_nb"	: "#282a36",
+			"set $menu_nf"	: "#ffffff",
+			"set $menu_sb"	: "#51afef",
 			"set $menu_sf"	: "#282a36"	
 		}
 }
