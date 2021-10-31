@@ -12,6 +12,7 @@ if len(sys.argv) == 1:
 colorschemes = {
 	"gruvbox-dark": {
 			"vim"			: "gruvbox8",
+			"lightline"		: "gruvbox",
 			"[seperator]\n"	: "#458588",
 			"[ethernet]\n"	: "#fb4934",
 			"[wifi]\n"		: "#b8bb26",
@@ -24,6 +25,7 @@ colorschemes = {
 		},
 	"nord":			{
 			"vim"			: "nord",
+			"lightline"		: "nord",
 			"[seperator]\n"	: "#68809a",
 			"[ethernet]\n"	: "#bf616a",
 			"[wifi]\n"		: "#a3be8c",
@@ -37,6 +39,7 @@ colorschemes = {
 		},
 	"dracula":		{
 			"vim"			: "dracula",
+			"lightline"		: "dracula",
 			"[seperator]\n"	: "#6272a4",
 			"[ethernet]\n"	: "#bf616a",
 			"[wifi]\n"		: "#5af78e",
@@ -49,6 +52,7 @@ colorschemes = {
 		},
 	"doom-one":		{
 			"vim"			: "onedark",
+			"lightline"		: "onedark",
 			"[seperator]\n"	: "#6272a4",
 			"[ethernet]\n"	: "#bf616a",
 			"[wifi]\n"		: "#98be65",
@@ -150,6 +154,9 @@ for no, line in enumerate(data):
 	if "colorscheme " in line:
 		vim = colorschemes[scheme]["vim"]
 		data[no] = f"colorscheme {vim}\n"
+	elif "\'colorscheme\'" in line:
+		lightline = colorschemes[scheme]["lightline"]
+		data[no] = f"	\\ \'colorscheme\': \'{lightline}\',\n"
 
 with open(file_path, "w") as w:
 	w.writelines(data)
