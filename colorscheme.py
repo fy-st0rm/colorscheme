@@ -62,6 +62,19 @@ colorschemes = {
 			"[volume]\n"	: "#bd93f9",
 			"[battery]\n"	: "#da8548",
 			"[time]\n"		: "#46d9ff"
+		},
+	"sdark":		{	
+			"vim"			: "ghdark",
+			"lightline"		: "ghdark",
+			"[seperator]\n"	: "#555267",
+			"[ethernet]\n"	: "#bf616a",
+			"[wifi]\n"		: "#7ce38b",
+			"[cpu_temp]\n"	: "#a2d2fb",
+			"[cpu_usage]\n"	: "#ecbe7b",
+			"[ram]\n"		: "#77bdfb",
+			"[volume]\n"	: "#cea5fb",
+			"[battery]\n"	: "#da8548",
+			"[time]\n"		: "#c8c2e1"
 		}
 }
 
@@ -97,13 +110,21 @@ colorschemes_i3 = {
 			"set $menu_nf"	: "#ffffff",
 			"set $menu_sb"	: "#51afef",
 			"set $menu_sf"	: "#282a36"	
+		},
+	"sdark":		{
+			"set $pannel_bg": "#030209",
+			"set $border"	: "#555267",
+			"set $menu_nb"	: "#030209",
+			"set $menu_nf"	: "#ecf2f8",
+			"set $menu_sb"	: "#555267",
+			"set $menu_sf"	: "#ecf2f8"	
 		}
 }
 
 scheme = sys.argv[1]
 if scheme not in colorschemes:
 	print(scheme, "is not a valid colorscheme name.")
-	exit(1)
+	exit()
 
 
 home_dir = os.path.expanduser("~")
