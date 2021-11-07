@@ -11,6 +11,7 @@ if len(sys.argv) == 1:
 # Scheme for i3blocks
 colorschemes = {
 	"gruvbox-dark": {
+			"wallpaper"		: "~/Pictures/Wallpapers/gruvbox_spaceman.jpg",
 			"vim"			: "gruvbox8",
 			"lightline"		: "gruvbox",
 			"[seperator]\n"	: "#458588",
@@ -24,6 +25,7 @@ colorschemes = {
 			"[time]\n"		: "#d79921"
 		},
 	"nord":			{
+			"wallpaper"		: "~/Pictures/Wallpapers/nord_spaceman.jpg",
 			"vim"			: "nord",
 			"lightline"		: "nord",
 			"[seperator]\n"	: "#68809a",
@@ -38,6 +40,7 @@ colorschemes = {
 
 		},
 	"dracula":		{
+			"wallpaper"		: "~/Pictures/Wallpapers/linux.jpg",
 			"vim"			: "dracula",
 			"lightline"		: "dracula",
 			"[seperator]\n"	: "#6272a4",
@@ -51,6 +54,7 @@ colorschemes = {
 			"[time]\n"		: "#f1fa8c"
 		},
 	"doom-one":		{
+			"wallpaper"		: "~/Pictures/Wallpapers/your-name-2.jpg",
 			"vim"			: "onedark",
 			"lightline"		: "onedark",
 			"[seperator]\n"	: "#6272a4",
@@ -63,7 +67,8 @@ colorschemes = {
 			"[battery]\n"	: "#da8548",
 			"[time]\n"		: "#46d9ff"
 		},
-	"sdark":		{	
+	"sdark":		{
+			"wallpaper"		: "~/Pictures/Wallpapers/night-computer.png",
 			"vim"			: "ghdark",
 			"lightline"		: "ghdark",
 			"[seperator]\n"	: "#555267",
@@ -199,4 +204,11 @@ for no, line in enumerate(data):
 
 with open(file_path, "w") as w:
 	w.writelines(data)
+
+
+#----
+# Wallpaper
+#----
+
+os.system("nitrogen --set-zoom-fill " + colorschemes[scheme]["wallpaper"])
 
