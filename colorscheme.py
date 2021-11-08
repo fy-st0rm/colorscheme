@@ -80,6 +80,20 @@ colorschemes = {
 			"[volume]\n"	: "#cea5fb",
 			"[battery]\n"	: "#da8548",
 			"[time]\n"		: "#c8c2e1"
+		},
+	"solarized-dark":		{
+			"wallpaper"		: "~/Pictures/Wallpapers/solarized.png",
+			"vim"			: "solarized",
+			"lightline"		: "solarized",
+			"[seperator]\n"	: "#586e75",
+			"[ethernet]\n"	: "#dc3ssf",
+			"[wifi]\n"		: "#859900",
+			"[cpu_temp]\n"	: "#2aa198",
+			"[cpu_usage]\n"	: "#b58900",
+			"[ram]\n"		: "#268bd2",
+			"[volume]\n"	: "#6c71c4",
+			"[battery]\n"	: "#da8548",
+			"[time]\n"		: "#c8c2e1"
 		}
 }
 
@@ -122,6 +136,14 @@ colorschemes_i3 = {
 			"set $menu_nb"	: "#030209",
 			"set $menu_nf"	: "#ecf2f8",
 			"set $menu_sb"	: "#555267",
+			"set $menu_sf"	: "#ecf2f8"	
+		},
+	"solarized-dark":		{
+			"set $pannel_bg": "#002b36",
+			"set $border"	: "#859900",
+			"set $menu_nb"	: "#073642",
+			"set $menu_nf"	: "#ecf2f8",
+			"set $menu_sb"	: "#859900",
 			"set $menu_sf"	: "#ecf2f8"	
 		}
 }
